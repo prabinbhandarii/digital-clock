@@ -1,0 +1,106 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500&display=swap");
+@import url("https://fonts.cdnfonts.com/css/alarm-clock");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Oswald", sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: blueviolet;
+}
+.container {
+  width: 500px;
+  background-color: rgb(203, 169, 243);
+  padding: 30px 35px;
+  box-shadow: 10px 10px 50px rgb(191, 149, 231);
+}
+.container .clock {
+  padding: 40px 10px 10px;
+  border-radius: 8px;
+  background-color: #dddd;
+  position: relative;
+}
+.clock .weekdays {
+  position: absolute;
+  top: 5px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 18px;
+}
+.clock .weekdays span {
+  padding: 0 10px;
+  opacity: 0.2;
+}
+
+.weekdays span.active {
+  opacity: 1;
+  color: red;
+}
+.time-display {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 70px;
+  letter-spacing: 2px;
+}
+.time > span {
+  font-family: "Digital-7", arial;
+}
+.time .dots {
+  animation: blinker 1s ease infinite;
+  color: red;
+}
+@keyframes blinker {
+  25% {
+    opacity: 0;
+  }
+}
+.time-display .format {
+  font-family: "Digital-7", arial;
+  color: red;
+  font-size: 30px;
+  margin: 45px 0 0 15px;
+}
+
+.full-date {
+  display: flex;
+  justify-content: center;
+  font-size: 25px;
+  font-weight: 500;
+}
+.full-date > span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 5px;
+  font-family: "alarm clock", sans-serif;
+}
+.full-date .comma {
+  font-family: "Oswald", sans-serif;
+}
+
+@media (max-width: 550px) {
+  .container {
+    width: 400px;
+  }
+  .clock .weekdays {
+    font-size: 14px;
+  }
+  .time-display {
+    font-size: 50px;
+  }
+  .time-display .format {
+    font-size: 25px;
+    margin: 27px 0 0 10px;
+  }
+  .full-date {
+    font-size: 20px;
+  }
+}
